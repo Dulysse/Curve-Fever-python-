@@ -99,7 +99,7 @@ def moveOn(dir,board,joueur):
     if dir == 'up':
         if board[x_head-1][y_head] == 3:
             board = getFruit(board,x_head,y_head,joueur)
-        elif (board[x_head-1][y_head] != 0 and board[x_head-1][y_head] != 3) or x_head == 1:
+        elif (board[x_head-1][y_head] != 0 and board[x_head-1][y_head] != 3) or x_head == 0:
             board = collide(joueur)
         board[x_head][y_head] = joueur[1]
         board[x_head-1][y_head] = joueur[0]
@@ -113,7 +113,7 @@ def moveOn(dir,board,joueur):
     if dir == 'left':
         if board[x_head][y_head-1] == 3:
             board = getFruit(board,x_head,y_head,joueur)
-        elif (board[x_head][y_head-1] != 0 and board[x_head][y_head-1] != 3) or y_head == 1:
+        elif (board[x_head][y_head-1] != 0 and board[x_head][y_head-1] != 3) or y_head == 0:
             board = collide(joueur)
         board[x_head][y_head] = joueur[1]
         board[x_head][y_head-1] = joueur[0]
